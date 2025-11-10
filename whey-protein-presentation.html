@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whey Protein: Essencial para Construção Muscular</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .slide {
+            background: white;
+            width: 90%;
+            max-width: 1200px;
+            height: 85vh;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 60px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .slide h1 {
+            font-size: 3.5rem;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: 2.5rem;
+            color: #764ba2;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .slide h3 {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .slide p, .slide li {
+            font-size: 1.3rem;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .slide ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .slide li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .slide li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #666;
+            font-weight: 300;
+            margin-top: -20px;
+            margin-bottom: 40px;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: #667eea;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            color: #667eea;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .content-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .emphasis {
+            font-size: 2rem;
+            color: #764ba2;
+            font-weight: 700;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 30px;
+            }
+
+            .slide h1 {
+                font-size: 2rem;
+            }
+
+            .slide h2 {
+                font-size: 1.8rem;
+            }
+
+            .slide p, .slide li {
+                font-size: 1rem;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Título -->
+        <div class="slide active">
+            <h1>Whey Protein</h1>
+            <p class="subtitle">Essencial para Construção Muscular e Proteínas de Alta Qualidade</p>
+            <div class="content-box">
+                <p style="font-size: 1.5rem; text-align: center;">
+                    O whey protein é essencial para a construção muscular, fornecendo proteínas de alta qualidade e aminoácidos essenciais para o seu corpo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Importância das Proteínas -->
+        <div class="slide">
+            <h2>Por Que as Proteínas São Essenciais?</h2>
+            <ul>
+                <li>Fundamentais na <span class="highlight">construção de massa muscular</span></li>
+                <li>Essenciais para a <span class="highlight">manutenção da saúde</span></li>
+                <li>Sem proteínas, o organismo não consegue funcionar adequadamente</li>
+                <li>Cruciais para a <span class="highlight">recuperação muscular</span></li>
+            </ul>
+            <p class="emphasis">Proteínas = Base da Vida</p>
+        </div>
+
+        <!-- Slide 3: Processo de Extração -->
+        <div class="slide">
+            <h2>Como é Produzido o Whey Protein?</h2>
+            <div class="content-box">
+                <h3>Processo de Extração</h3>
+                <p>O whey protein é extraído através da separação da fase proteica do leite, que é então concentrada e transformada em pó.</p>
+            </div>
+            <p style="margin-top: 30px; font-size: 1.4rem;">
+                Este processo garante uma <span class="highlight">fonte de proteína de alta qualidade</span>, preservando todos os aminoácidos essenciais.
+            </p>
+        </div>
+
+        <!-- Slide 4: Fontes de Proteína -->
+        <div class="slide">
+            <h2>Alimentos Ricos em Proteínas</h2>
+            <div class="two-column">
+                <div>
+                    <h3>Fontes Principais:</h3>
+                    <ul>
+                        <li>Carne</li>
+                        <li>Frango</li>
+                        <li>Ovos</li>
+                        <li>Peixe</li>
+                        <li>Leite</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="content-box">
+                        <p><strong>Benefícios:</strong></p>
+                        <p>Esses alimentos são essenciais para atender às necessidades do corpo e ajudam na recuperação muscular.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Valor Biológico -->
+        <div class="slide">
+            <h2>Valor Biológico das Proteínas</h2>
+            <div class="content-box">
+                <h3>O que é Valor Biológico?</h3>
+                <p>Refere-se à <span class="highlight">qualidade e eficácia</span> das proteínas na nutrição.</p>
+            </div>
+            <ul style="margin-top: 30px;">
+                <li>Proteínas de <span class="highlight">alto valor biológico</span> são mais benéficas para a construção muscular</li>
+                <li>São ricas em <span class="highlight">aminoácidos essenciais</span> que o corpo necessita</li>
+                <li>Fontes incluem: carne, frango, ovos, peixe e whey protein</li>
+            </ul>
+        </div>
+
+        <!-- Slide 6: Saciedade e Perda de Peso -->
+        <div class="slide">
+            <h2>Proteína para Emagrecimento</h2>
+            <ul>
+                <li>A proteína ajuda na <span class="highlight">saciedade</span></li>
+                <li>Útil para quem está perdendo peso</li>
+                <li>Mantém a <span class="highlight">massa muscular</span> durante o processo de emagrecimento</li>
+                <li>Especialmente importante em dietas de emagrecimento</li>
+            </ul>
+            <p class="emphasis">Proteína = Aliada do Emagrecimento Saudável</p>
+        </div>
+
+        <!-- Slide 7: Quantidade para Hipertrofia -->
+        <div class="slide">
+            <h2>Quantidade Ideal para Hipertrofia</h2>
+            <div class="content-box">
+                <p class="emphasis" style="margin: 0;">1.6 a 2.0g</p>
+                <p style="text-align: center; font-size: 1.3rem; margin-top: 10px;">de proteína por kg de peso corporal</p>
+            </div>
+            <p style="margin-top: 40px; font-size: 1.4rem;">
+                Esta ingestão é <span class="highlight">crucial para o ganho muscular</span> e deve ser distribuída ao longo do dia.
+            </p>
+            <p style="margin-top: 20px;">
+                <strong>Exemplo:</strong> Uma pessoa de 70kg deve consumir entre 112g e 140g de proteína por dia.
+            </p>
+        </div>
+
+        <!-- Slide 8: Distribuição ao Longo do Dia -->
+        <div class="slide">
+            <h2>Como Distribuir as Proteínas</h2>
+            <ul>
+                <li>Consumir de <span class="highlight">3 a 4 refeições</span> ricas em proteínas ao longo do dia</li>
+                <li>A proteína pode ser consumida em <span class="highlight">diferentes momentos</span>, não apenas após o treino</li>
+                <li>O foco deve ser alcançar a <span class="highlight">quantidade ideal diária</span></li>
+                <li>Consumir proteína entre as refeições ajuda a manter o corpo nutrido</li>
+                <li>Evita longos períodos sem alimento</li>
+            </ul>
+        </div>
+
+        <!-- Slide 9: Preparo do Whey -->
+        <div class="slide">
+            <h2>Como Preparar o Whey Protein</h2>
+            <div class="two-column">
+                <div>
+                    <h3>Líquidos:</h3>
+                    <ul>
+                        <li>Água</li>
+                        <li>Leite</li>
+                        <li>Sucos</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="content-box">
+                        <p><strong>Atenção:</strong></p>
+                        <p>A dissolução em diferentes líquidos não afeta as propriedades da proteína, mas esteja atento às calorias adicionais!</p>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 30px;">
+                <strong>Exemplo:</strong> Um copo de suco de laranja pode ter 150 calorias extras.
+            </p>
+        </div>
+
+        <!-- Slide 10: Qualidade dos Suplementos -->
+        <div class="slide">
+            <h2>Escolhendo o Suplemento Certo</h2>
+            <div class="content-box">
+                <h3>⚠️ Pontos de Atenção:</h3>
+                <ul>
+                    <li>Verificar a <span class="highlight">concentração de proteína</span> no produto</li>
+                    <li>Alguns produtos possuem menos proteína do que anunciado</li>
+                    <li>Cuidado com produtos que têm mais carboidratos do que proteínas</li>
+                    <li>Exemplo: proteína concentrada oferece 23g em apenas 30g de produto</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 11: Cuidados na Compra -->
+        <div class="slide">
+            <h2>Cuidados ao Comprar Whey Protein</h2>
+            <ul>
+                <li><span class="highlight">Cuidado com produtos falsificados</span></li>
+                <li>O preço pode variar muito entre produtos</li>
+                <li>Prefira comprar <span class="highlight">diretamente do fabricante</span></li>
+                <li>Garanta a qualidade verificando selos e certificações</li>
+                <li>Analise a concentração e qualidade dos produtos</li>
+            </ul>
+            <p class="emphasis" style="margin-top: 40px;">Qualidade > Preço Baixo</p>
+        </div>
+
+        <!-- Slide 12: Conclusão -->
+        <div class="slide">
+            <h2>Conclusão</h2>
+            <div class="content-box">
+                <p style="font-size: 1.4rem; text-align: center; margin-bottom: 20px;">
+                    O whey protein é uma ferramenta poderosa para:
+                </p>
+                <ul>
+                    <li>Construção muscular eficiente</li>
+                    <li>Recuperação pós-treino</li>
+                    <li>Manutenção da massa magra</li>
+                    <li>Praticidade na ingestão proteica</li>
+                </ul>
+            </div>
+            <p class="emphasis" style="margin-top: 40px;">
+                Escolha com sabedoria e alcance seus objetivos!
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-counter">
+        <span id="current-slide">1</span> / <span id="total-slides">12</span>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prev-btn">← Anterior</button>
+        <button class="nav-btn" id="next-btn">Próximo →</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const currentSlideSpan = document.getElementById('current-slide');
+        const totalSlidesSpan = document.getElementById('total-slides');
+
+        totalSlidesSpan.textContent = totalSlides;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            currentSlideSpan.textContent = currentSlide + 1;
+
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            }
+        });
+
+        // Initialize
+        prevBtn.disabled = true;
+    </script>
+</body>
+</html>
